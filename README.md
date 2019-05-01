@@ -8,8 +8,8 @@ Installation:
 * Media files should be sourced properly in HTML, by default they're looking at current working directory.
 * Copy ``jeffsteff`` and ``jeffsteff-mobile`` to ``/var/www/``
 * htaccess should be renamed to .htaccess and moved into jeffsteff.
-* httpd.conf moved to ``/etc/httpd/conf/`` (CentOS/RHEL)
-* haproxy.conf moved to ``/etc/haproxy``
+* jeffsteff.conf moved to ``/etc/httpd/conf.d/`` (CentOS/RHEL)
+* haproxy.conf moved to ``/etc/haproxy/``
 
 HAProxy config listening on port 80 and using ACLs to look for the domain inputted.  
 
