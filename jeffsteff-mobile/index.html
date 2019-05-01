@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JeffSteff Mobile Homepage</title>
+    <meta name="description" content="I am Jeff in mobile form.">
+    <meta name="author" content="Chungnetwork LLC">
+  </head>
+  <body bgcolor="#000000">
+    <audio id="music" autoplay loop></audio>
+    <center>
+      <video loop autoplay muted playsinline width="650" height="800" src="jeffsteff.mp4" type="video/mp4"></video>
+    </center>
+    <script>
+      (function() {
+          function log(info) { console.log(info); }
+          function forceMobileAudio() { jeff_audio.load(); jeff_audio.play(); }
+          var jeff_audio = document.getElementById('music');
+          jeff_audio.addEventListener('loadstart', function() { log('loadstart'); }, false);
+          jeff_audio.addEventListener('loadeddata', function() { log('loadeddata'); }, false);
+          jeff_audio.addEventListener('play', function() { log('play'); window.removeEventListener('touchstart', forceMobileAudio, false); }, false);
+          jeff_audio.addEventListener('playing', function() { log('playing'); }, false);
+          window.addEventListener('touchstart', forceMobileAudio, false);
+          jeff_audio.src = 'diewoodys.mp3';
+      })();
+    </script>
+    <center><font color=#383838><small>MOBILE EDITION</small></font></center>
+  </body>
+</html>
